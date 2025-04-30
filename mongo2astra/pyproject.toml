@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mongo2astra"
+version = "0.1.1"
+description = "A CLI tool to migrate MongoDB documents to AstraDB Vector Store"
+authors = [{ name = "Ankesh Kumar", email = "ankesh3905222@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "pymongo",
+    "langchain-core",
+    "langchain-astradb",
+    "langchain-huggingface",
+    "python-dotenv",
+]
+
+[project.scripts]
+mongo2astra = "mongo2astra.migrator:main"
